@@ -1,0 +1,18 @@
+server:
+   port: 8181
+   
+spring:
+   application:
+      name: DEMO-SERVICE
+   datasource:
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3307}/test?useSSL=false&autoReconnect=true
+      username: ${MYSQL_USER:root}
+      password: ${MYSQL_PASSWORD:root}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      
+   jpa:
+      database: mysql
+      hibernate:
+         ddl-auto: update
+      show-sql: true
+      
